@@ -1,0 +1,46 @@
+﻿<Window x:Class="SystemTask2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="155" Width="700" FontSize="18" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+
+    <StackPanel>
+        <Grid Margin="10 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Content="From" HorizontalAlignment="Center" Padding="7 0"/>
+            <TextBox Grid.Column="1"  IsEnabled="False" Padding="7 0" Name="tbox_From"/>
+            <Button Grid.Column="2" Content="File..." HorizontalAlignment="Center" Padding="7 0" Name="btn_From" Cursor="Hand" Click="btn_From_Click"/>
+        </Grid>
+
+        <Grid Margin="10 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Content="To" HorizontalAlignment="Center" Padding="7 0"/>
+            <TextBox Grid.Column="1" Padding="7 0" Name="tbox_To" IsEnabled="False"/>
+            <Button Grid.Column="2" Content="Folder..." HorizontalAlignment="Center" Padding="7 0" Name="btn_To" Cursor="Hand" Click="btn_To_Click"/>
+        </Grid>
+
+        <Grid Margin="10 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar Grid.Column="1" Padding="7 0" x:Name="progressBar"/>
+            <Button Grid.Column="2" Content="Copy" HorizontalAlignment="Center" Padding="7 0" Name="btn_Copy" Cursor="Hand" Click="btn_Copy_Click"/>
+        </Grid>
+
+    </StackPanel>
+
+</Window>
